@@ -23,13 +23,11 @@ Installation
 
 - Clone the repository:
         
-        <pre>
     ```bash
     git clone https://github.com/your-username/django-rest-project.git
     cd django-rest-project
 
     ```
-        </pre>
 - Create a virtual environment and activate it:
 
          <pre>
