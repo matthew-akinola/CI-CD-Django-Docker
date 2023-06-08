@@ -30,31 +30,25 @@ Installation
     ```
 - Create a virtual environment and activate it:
 
-         <pre>
     ```bash
         python -m venv env
         source env/bin/activate  # For Linux/Mac
         env\Scripts\activate  # For Windows
     ```
-        </pre>
 - Install the dependencies
     
-     <pre>
     ```bash
         pip install -r requirements.txt
     ```
-        </pre>
 
 - Setup the environment variables
     * create a .env file and populate with your secret credentials
 
 - Start the docker 
 
-      <pre>
     ```bash
         docker-compose -d
     ```
-        </pre>
 
 # For comprehensive navigation of the codebase, checkout this article
 
