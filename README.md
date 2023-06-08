@@ -24,8 +24,8 @@ Installation
 - Clone the repository:
         
     ```bash
-    git clone https://github.com/your-username/django-rest-project.git
-    cd django-rest-project
+    git clone https://github.com/matthew-akinola/CI-CD-Django-Docker
+    cd CI-CD-Django-Docker
 
     ```
 - Create a virtual environment and activate it:
@@ -35,10 +35,24 @@ Installation
         source env/bin/activate  # For Linux/Mac
         env\Scripts\activate  # For Windows
     ```
-- Install the dependencies
-    
+- Setup the environment variables
+    * create a .env file and populate with your secret credentials
+
+- install dependencies
     ```bash
         pip install -r requirements.txt
+    ```
+
+- collect static files
+    
+    ```bash
+        python manage.py collectstatic
+    ```
+- make database migration
+    
+    ```bash
+        python manage.py makemigrations
+        python manage.py migrate
     ```
 
 - Setup the environment variables
@@ -47,7 +61,7 @@ Installation
 - Start the docker 
 
     ```bash
-        docker-compose -d
+        docker-compose -d 
     ```
 
 # For comprehensive navigation of the codebase, checkout this article
