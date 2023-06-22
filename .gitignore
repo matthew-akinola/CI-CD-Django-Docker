@@ -7,8 +7,8 @@
 *.env
 
 # Database files
-*.db
-*.sqlite3
+# *.db
+# *.sqlite3
 
 # Dependency directories
 *venv/
