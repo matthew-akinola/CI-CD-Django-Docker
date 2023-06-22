@@ -1,11 +1,11 @@
 # The image you are going to inherit your Dockerfile from
-FROM python:3.9
+FROM python:3.9-alpine
 
 # Set the /django_blog directory as the working directory
 WORKDIR /app
 
-RUN addgroup sytemUserGroup
-RUN adduser -D -G sytemUserGroup developer 
+RUN addgroup system_user_group && adduser -D -G system_user_group developer
+
 RUN chmod g+x /app
 
 
