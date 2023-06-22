@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY =config('DJANGO_SECRET')
+SECRET_KEY ='django-insecure-%e%vy&po$^%rs@37dcjm7b5ff$w-s^u*6q&1cyh@*_%%yu80gz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG= config("DEBUG", "False", cast=bool)
@@ -130,41 +130,6 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-
-
-
-
-# setting logger for production sake since debug is set to false
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {
-        "console": {"class": "logging.StreamHandler", "formatter": "simple"},
-        "file": {
-            "class": "logging.FileHandler",
-            "filename": "general.log",
-            "formatter": "verbose",
-            "level": config("DJANGO_LOG_LEVEL", "WARNING"),
-        },
-    },
-    "loggers": {
-        "": {  # The empty string indicates ~ All Apps including installed apps
-            "handlers": ["file"],
-            "propagate": True,
-        },
-        
-    },
-    "formatters": {
-        "verbose": {
-            "format": "{asctime} ({levelname}) -  {module} {name} {process:d} {thread:d} {message}",
-            "style": "{",
-        },
-        "simple": {
-            "format": "{asctime} ({levelname}) -  {message}",
-            "style": "{",
-        },
-    },
-}
 
 
 # Default primary key field type
