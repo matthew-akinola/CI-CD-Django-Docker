@@ -1,5 +1,5 @@
 # The image you are going to inherit your Dockerfile from
-FROM python:3.9-alpine
+FROM python:3.9
 
 # Set the /django_blog directory as the working directory
 WORKDIR /app
