@@ -4,6 +4,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
+      - '--no-cache'
       - '-t'
       - 'gcr.io/forward-server-390416/django_blog:$COMMIT_SHA'
       - '.'
