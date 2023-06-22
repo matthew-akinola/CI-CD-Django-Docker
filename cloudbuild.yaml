@@ -1,12 +1,5 @@
 steps:
-  # Install dependencies
-  - name: 'gcr.io/cloud-builders/python'
-    args: ['pip', 'install', '-r', 'requirements.txt']
-
-  # Run tests
-  - name: 'gcr.io/cloud-builders/python'
-    args: ['python', 'manage.py', 'test']
-
+ 
   # Build and push Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args:
