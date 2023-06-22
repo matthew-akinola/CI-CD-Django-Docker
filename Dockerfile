@@ -27,6 +27,7 @@ COPY ./requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 ENV DEBUG=${DEBUG}
+COPY ./db.sqlite3 db.sqlite3
 # copy the django project into the container image
 COPY . .
 
