@@ -16,7 +16,6 @@ USER developer
 ENV PYTHONUNBUFFERED 1
 
 # Set environment variables for AWS RDS and S3
-COPY ./.env .env
 
 ENV DJANGO_SECRET=${DJANGO_SECRET}
 
