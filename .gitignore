@@ -1,6 +1,6 @@
 # Python/Django
 *.pyc
-__pycache__/
+*__pycache__/
 
 # Secret keys and environment-specific settings
 .env
@@ -13,6 +13,6 @@ __pycache__/
 # Dependency directories
 *venv/
 *.env/
-
+*ceph.txt
 
 

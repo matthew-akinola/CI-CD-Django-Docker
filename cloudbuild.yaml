@@ -1,0 +1,21 @@
+steps:
+  # Install dependencies
+  - name: 'gcr.io/cloud-builders/python'
+    args: ['pip', 'install', '-r', 'requirements.txt']
+
+  # Run tests
+  - name: 'gcr.io/cloud-builders/python'
+    args: ['python', 'manage.py', 'test']
+
+  # Build and push Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/forward-server-390416/django_blog:$COMMIT_SHA'
+      - '.'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/forward-server-390416/django_blog:$COMMIT_SHA'

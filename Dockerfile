@@ -6,6 +6,8 @@ WORKDIR /app
 
 RUN addgroup sytemUserGroup && adduser -D -G sytemUserGroup developer 
 RUN chmod g+x /app
+
+
 # Create a user that can run your container
 USER developer
 
@@ -34,4 +36,7 @@ RUN pip install -r requirements.txt
 ENV DEBUG=${DEBUG}
 # copy the django project into the container image
 COPY . .
+EXPOSE 8000
 CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+
+# RUN docker build -t gcr.io/forward-server-390416/django_blog .
