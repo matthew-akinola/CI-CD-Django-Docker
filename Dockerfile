@@ -4,7 +4,8 @@ FROM python:3.9
 # Set the /django_blog directory as the working directory
 WORKDIR /app
 
-RUN addgroup sytemUserGroup && adduser -D -G sytemUserGroup developer 
+RUN addgroup sytemUserGroup
+RUN adduser -D -G sytemUserGroup developer 
 RUN chmod g+x /app
 
 
