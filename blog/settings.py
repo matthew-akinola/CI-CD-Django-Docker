@@ -28,7 +28,7 @@ SECRET_KEY ='django-insecure-%e%vy&po$^%rs@37dcjm7b5ff$w-s^u*6q&1cyh@*_%%yu80gz'
 DEBUG= True
 ALLOWED_HOSTS = [
     'django-service-3gjvcximaa-uc.a.run.app', 
-    'nginx-public-service-3gjvcximaa-uc.a.run.app'
+    'fastapi-public-service-3gjvcximaa-uc.a.run.app'
     ]
 
 
