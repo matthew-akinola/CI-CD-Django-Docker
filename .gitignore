@@ -5,6 +5,7 @@
 # Secret keys and environment-specific settings
 .env
 *.env
+*README.md
 
 # Database files
 # *.db
